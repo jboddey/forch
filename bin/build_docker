@@ -75,7 +75,7 @@ docker_args+=--label=FAUCET_HASH=$faucet_ver
 
 for image in $ALL_IMAGES; do
     echo Building $image, output in build/docker_$image.log
-    docker build -t forch/$image $docker_args -f etc/Dockerfile.$image . > build/docker_$image.log
+    docker build -t forch/$image $docker_args -f etc/Dockerfile.$image .
     tail build/docker_$image.log
 done
 
